@@ -8,7 +8,6 @@ class dictator(dict):
             for k in arg:
                 d[k] = arg[k]
         elif isinstance(arg, list):
-            print arg
             for k,v in arg:
                 d[k] = v
         dict.__init__(self, d, **kwargs)
