@@ -1,12 +1,10 @@
-dictator
-========
+# dictator #
 
 Small, almost useless Python module, offering Lua-style syntactic table access
 sugar to dictionaries. In return, you won't be able to use any traditional
 dictionary methods. 
 
-Features
---------
+## Features ##
 
 Syntactic sugar for (string) keys. Does away with the tedious
 "bracket-quote-string-quote-bracket" subscripting notation. Instead, simply
@@ -27,9 +25,21 @@ Of course, the following still works:
 Trying to access an attribute of the object that simply does not exist as a key
 in the dictionary will _always_ result in a KeyError.
 
+Also, I have added support for many of the more obscure ways to instantiate a
+"normal" dictionary:
 
-Limitations
------------
+>>> d = dictator({"a":23}, fettemama=42)
+>>> print d
+{'a': 23, 'fettemama': 42}
+
+Instantiation with a list of tuples also works:
+
+>>> d = dictator([("fettemama",42)])
+>>> print d
+{'fettemama': 42}
+
+
+## Limitations ##
 
 Any code relying on direct access to object methods, such as ".keys()" or
 ".pop()" will not work, because trying to call these will be interpreted as
