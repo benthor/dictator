@@ -1,0 +1,38 @@
+dictator
+========
+
+Small, almost useless Python module, offering Lua-style syntactic table access
+sugar to dictionaries. In return, you won't be able to use any traditional
+dictionary methods. 
+
+Features
+--------
+
+Syntactic sugar for (string) keys. Does away with the tedious
+"bracket-quote-string-quote-bracket" subscripting notation. Instead, simply
+access the dictionary with the key string as  _attribute_ like so:
+
+>>> from dictator import dictator
+>>> d = dictator()
+>>> d.some_string_key = 42
+>>> print d
+{'some_string_key': 42}
+
+Of course, the following still works:
+
+>>> d["some fancy longer string"] = 23
+>>> print d
+{'some fancy longer string': 23, 'some_string_key': 42}
+
+Trying to access an attribute of the object that simply does not exist as a key
+in the dictionary will _always_ result in a KeyError.
+
+
+Limitations
+-----------
+
+Any code relying on direct access to object methods, such as ".keys()" or
+".pop()" will not work, because trying to call these will be interpreted as
+attempted dictionary element access. 
+
+Thus, the way you use dictionaries is pretty much _dictated_. 
