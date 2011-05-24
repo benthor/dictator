@@ -5,12 +5,15 @@ Normally you store stuff in a python dictionary 'd' like so:
     d['foo'] = 42
     d['bar'] = 23
 
-But if you use a dictator object instead, you can do:
+But if you use the dictator dictionary subclass instance instead, you can do:
     
     d.foo = 42
     d.bar = 23
 
 It both achieves the same thing, but the second is easier to read and write.
+
+    print d
+    {'bar': 23, 'foo': 42}
 
 
 # README #
