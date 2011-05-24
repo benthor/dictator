@@ -37,6 +37,7 @@ Instantiation with a list of tuples also works:
     {'fettemama': 42}
 
 The anarchist class can do anything of the above, just import it like so:
+    
     >>> from dictator import anarchist
 
 (The dictator idea came first, that's why the module is named after him (or her))
