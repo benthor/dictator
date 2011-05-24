@@ -10,34 +10,34 @@ In case of using the anarchist class you, on the other hand, will easily shoot y
 
 Syntactic sugar for (string) keys. Does away with the tedious "bracket-quote-string-quote-bracket" subscripting notation. Instead, simply access the dictionary with the key string as  _attribute_ like so:
 
->>> from dictator import dictator
->>> d = dictator()
->>> d.some_string_key = 42
->>> print d
-{'some_string_key': 42}
+    >>> from dictator import dictator
+    >>> d = dictator()
+    >>> d.some_string_key = 42
+    >>> print d
+    {'some_string_key': 42}
 
 Of course, the following still works:
 
->>> d["some fancy longer string"] = 23
->>> print d
-{'some fancy longer string': 23, 'some_string_key': 42}
+    >>> d["some fancy longer string"] = 23
+    >>> print d
+    {'some fancy longer string': 23, 'some_string_key': 42}
 
 Trying to access an attribute of the object that simply does not exist as a key in the dictionary will _always_ result in a KeyError.
 
 Also, all the obscure ways to instantiate a "normal" dictionary are still supported:
 
->>> d = dictator({"a":23}, fettemama=42)
->>> print d
-{'a': 23, 'fettemama': 42}
+    >>> d = dictator({"a":23}, fettemama=42)
+    >>> print d
+    {'a': 23, 'fettemama': 42}
 
 Instantiation with a list of tuples also works:
 
->>> d = dictator([("fettemama",42)])
->>> print d
-{'fettemama': 42}
+    >>> d = dictator([("fettemama",42)])
+    >>> print d
+    {'fettemama': 42}
 
 The anarchist class can do anything of the above, just import it like so:
->>> from dictator import anarchist
+    >>> from dictator import anarchist
 
 (The dictator idea came first, that's why the module is named after him (or her))
 
