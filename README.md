@@ -44,15 +44,15 @@ Trying to access an attribute of the object that simply does not exist as a key 
 
 Also, all the obscure ways to instantiate a "normal" dictionary are still supported:
 
-    >>> d = dictator({"a":23}, fettemama=42)
+    >>> d = dictator({"a":23}, spam=42)
     >>> print d
-    {'a': 23, 'fettemama': 42}
+    {'a': 23, 'spam': 42}
 
 Instantiation with a list of tuples also works:
 
-    >>> d = dictator([("fettemama",42)])
+    >>> d = dictator([("spam",42)])
     >>> print d
-    {'fettemama': 42}
+    {'spam': 42}
 
 The anarchist class can do anything of the above, just import it like so:
     
